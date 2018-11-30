@@ -3,12 +3,9 @@ import java.util.List;
 import java.util.LinkedList;
 
 public class ReportsDAOImpl implements ReportsDAO{
-	private LinkedList<Report> reports;
+	private static LinkedList<Report> reports = new  LinkedList<Report>();
 	
-	ReportsDAOImpl(){
-		reports = new  LinkedList<Report>();
-	}
-	
+
 	
 	/*********
 	returns true if success, 

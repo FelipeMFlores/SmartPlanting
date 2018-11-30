@@ -2,7 +2,7 @@ package schedulesRepo;
 
 import java.util.List;
 
-public interface SchedulesDAO {
+public  interface SchedulesDAO {
 
 	
 	
@@ -10,7 +10,7 @@ public interface SchedulesDAO {
 	returns true if success, 
 	and false if there is a schedule with the same id in the repository.
 	**********/
-	public boolean addSchedule(Schedule schedule);
+	public  boolean addSchedule(Schedule schedule);
 	
 	
 	/*********

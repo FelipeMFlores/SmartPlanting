@@ -8,11 +8,8 @@ import java.util.List;
 
 public class SchedulesDAOImpl implements SchedulesDAO {
 
-	private LinkedList<Schedule> schedules;
-	
-	public SchedulesDAOImpl() {
-		schedules = new LinkedList<Schedule>();
-	}
+	private static LinkedList<Schedule> schedules = new LinkedList<Schedule>();;
+
 	
 	
 	/*********
