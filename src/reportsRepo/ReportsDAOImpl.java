@@ -86,7 +86,7 @@ public class ReportsDAOImpl implements ReportsDAO{
 	returns all the reports with the same type and terrainID.
 	If type is 0, returns of any type.
 	If terrainID is 0, returns of any terrain.
-	Returns null is there is'nt any report in the repository.
+	Returns empty list if there is'nt any report in the repository.
 	**********/	
 	@Override
 	public List<Report> getAllReports(int type, int terrainID ){

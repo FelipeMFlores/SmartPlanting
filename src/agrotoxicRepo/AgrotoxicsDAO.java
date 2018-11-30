@@ -33,7 +33,7 @@ public interface AgrotoxicsDAO {
 	
 	/*********
 	returns all the Agrotoxic. 
-	Returns null is there is'nt any reAgrotoxicport in the repository.
+	Returns empty list if there is'nt any reAgrotoxicport in the repository.
 	**********/
 	public List<Agrotoxic> getAllAgrotoxics();
 	
