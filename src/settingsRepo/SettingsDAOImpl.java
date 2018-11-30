@@ -68,7 +68,7 @@ public class SettingsDAOImpl implements SettingsDAO {
 	
 	/*********
 	returns all the setting.
-	Returns null is there is'nt any setting in the repository.
+	Returns empty list if there is'nt any setting in the repository.
 	**********/
 	@Override
 	public List<Setting> getAllSettings() {

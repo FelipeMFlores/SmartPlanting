@@ -6,15 +6,19 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class schedulesDAOImpl implements SchedulesDAO {
+public class SchedulesDAOImpl implements SchedulesDAO {
 
 	private LinkedList<Schedule> schedules;
 	
-	public schedulesDAOImpl() {
+	public SchedulesDAOImpl() {
 		schedules = new LinkedList<Schedule>();
 	}
 	
 	
+	/*********
+	returns true if success, 
+	and false if there is a schedule with the same id in the repository.
+	**********/
 	@Override
 	public boolean addSchedule(Schedule schedule) {
 		if(schedules.indexOf(schedule) != -1) return false;
@@ -22,11 +26,21 @@ public class schedulesDAOImpl implements SchedulesDAO {
 		return true;
 	}
 
+	/*********
+	returns true if success, 
+	and false if there is'nt a schedule with the same id in the repository.
+	**********/
 	@Override
 	public boolean deleteSchedule(int id) {
 		return schedules.removeIf(s -> s.getId() == id);
 	}
 
+	
+	/*********
+	returns true if success, 
+	and false if there is'nt a schedule with the same id in the repository.
+	The update is based on the id, therefore you can't change it.
+	**********/
 	@Override
 	public boolean updateSchedule(Schedule schedule) {
 		int index = schedules.indexOf(schedule);
@@ -36,6 +50,11 @@ public class schedulesDAOImpl implements SchedulesDAO {
 	}
 
 	
+	
+	/*********
+	returns the schedule if success, 
+	and null if there is'nt a schedule with the same id in the repository.
+	**********/
 	@Override
 	public Schedule getSchedule(int id) {
 		for (Schedule schedule : schedules) {
@@ -49,14 +68,18 @@ public class schedulesDAOImpl implements SchedulesDAO {
 	
 	class SortbyDate implements Comparator<Schedule> 
 	{ 
-	    // Used for sorting in ascending order of 
-	    // roll number 
+	    // Used for sorting in ascending order of date
 	    public int compare(Schedule a, Schedule b) 
 	    { 
 	        return a.getDate() - b.getDate(); 
 	    } 
 	} 
 	
+	
+	/*********
+	returns the schedule with the lowest date, 
+	and null if there is'nt any schedule in the repository.
+	**********/
 	@Override
 	public Schedule getNextSchedule() {
 		// Sorting
@@ -67,6 +90,11 @@ public class schedulesDAOImpl implements SchedulesDAO {
 		return clone;
 	}
 
+	
+	/*********
+	returns all the schedules.
+	Returns empty list if there is'nt any schedule in the repository.
+	**********/
 	@Override
 	public List<Schedule> getAllSchedules() {
 		List<Schedule> listClone = new LinkedList<Schedule>();

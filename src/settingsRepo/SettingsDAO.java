@@ -31,7 +31,7 @@ public interface SettingsDAO{
 	
 	/*********
 	returns all the setting.
-	Returns null is there is'nt any setting in the repository.
+	Returns empty list if there is'nt any setting in the repository.
 	**********/
 	public List<Setting> getAllSettings(); 
 	

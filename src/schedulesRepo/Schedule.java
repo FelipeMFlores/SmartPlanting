@@ -3,9 +3,9 @@ package schedulesRepo;
 
 public class Schedule {
 
-	private static int idgenerator = 0;
+	private static int idgenerator = 0; //for generating new id
 	private int id;
-	private int date;
+	private int date;//YYYYMMDD
 	private int terrainID;
 	
 	public Schedule(){
@@ -16,6 +16,12 @@ public class Schedule {
 		id = original.getId();
 		date = original.getDate();
 		terrainID = original.getTerrainID();
+	}
+	
+	public Schedule(int date,int terrainID) {
+		id = idgenerator++;
+		this.date = date;
+		this.terrainID = terrainID;
 	}
 	
 	
