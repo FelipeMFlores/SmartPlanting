@@ -5,11 +5,8 @@ import java.util.List;
 
 public class SettingsDAOImpl implements SettingsDAO {
 	
-	private LinkedList<Setting> settings;
+	private LinkedList<Setting> settings = new  LinkedList<Setting>();
 
-	public SettingsDAOImpl(){
-		settings = new  LinkedList<Setting>();
-	}
 	
 	
 	

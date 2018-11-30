@@ -6,12 +6,8 @@ import java.util.List;
 
 public class AgrotoxicsDAOImpl implements AgrotoxicsDAO {
 
-	private LinkedList<Agrotoxic> agrotoxics;
-	
-	public AgrotoxicsDAOImpl() {
-		agrotoxics = new LinkedList<Agrotoxic>();
-	}
-	
+	private static LinkedList<Agrotoxic> agrotoxics = new LinkedList<Agrotoxic>();
+
 	
 	/*********
 	returns true if success, 

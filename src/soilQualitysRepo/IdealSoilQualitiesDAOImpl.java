@@ -6,12 +6,8 @@ import java.util.List;
 
 public class IdealSoilQualitiesDAOImpl implements IdealSoilQualitiesDAO {
 	
-	private LinkedList<SoilQuality> idealSoilQualities;
-	
-	public IdealSoilQualitiesDAOImpl() {
-		idealSoilQualities = new LinkedList<SoilQuality>();
-	}
-	
+	private LinkedList<SoilQuality> idealSoilQualities = new LinkedList<SoilQuality>();
+
 	
 	/*********
 	returns true if success, 
